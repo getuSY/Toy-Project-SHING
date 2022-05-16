@@ -41,6 +41,38 @@
 
 1. **서울특별시_대중교통환승경로 조회 서비스**(getLocationInfoList, getPathInfoBySubwayList) : OPEN API => json파일로 변환해야 하고, 환승경로 조회 및 총 소요시간 알 수 있다.
 
+   ```python
+   # 서울특별시 대중교통환승경로 조회 서비스 api 데이터 json으로 받아오기
+   # 기능 : getLocationInfoList
+   import requests
+   import json
+   from pprint import pprint
+   
+   url = 'http://ws.bus.go.kr/api/rest/pathinfo/getLocationInfo'
+   params ={'serviceKey' : 'key', 'stSrch': '서울역','resultType' : 'json' }
+   
+   response = requests.get(url, params)
+   res = response.content.decode('utf-8')
+   pprint(res)
+   
+   
+   # 기능 : getPathInfoBySubwayList
+   import requests
+   import json
+   from pprint import pprint
+   
+   url = 'http://ws.bus.go.kr/api/rest/pathinfo/getPathInfoBySubway'
+   params ={'serviceKey' : 'key', 'startX' :126.83948388112836, 'startY' : 37.558210971753226, 'endX' : 127.01460762172958, 'endY' : 37.57250, 'resultType' : 'json' }
+   
+   response = requests.get(url, params)
+   res = response.json()
+   pprint(res)
+   ```
+
+   - 인코딩 키와 디코딩 키 둘 중의 하나 구동되는 것을 적절히 사용하여야 함.
+   - xml => json 파일 변환하기 고비 넘김. // 디코딩!!
+   - gpsX, gpsY를 받아와야 할지 poiX, poiY를 받아와야 할지 고민하기.
+
 2. 서울교통공사 환승역거리 및 소요시간 정보 : 파일
 
 3. 서울교통공사 역간 거리 및 소요시간 정보 : OPEN API
