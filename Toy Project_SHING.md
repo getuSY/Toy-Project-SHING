@@ -1,5 +1,9 @@
 # Toy Project_SHING
 
+함께한 사람들 : 김준구, 이승연
+
+
+
 ## 구현 준비
 
 ### 구현 1차 목표
@@ -150,3 +154,15 @@
 3. 경로 안내 상세 페이지
 4. 편의시설 가동현황 확인 페이지
 5. (추가사항) 게시판 기능 구현
+
+
+
+## 구현 시작 (5/18 ~)
+
+DB, 모델 구성 => Django (5/18)
+
+1. 역 model  json 파일 fixtures 통해 DB 구축 : 준구
+
+2. SHING Project skeleton 형성 및 환승역 model csv 파일 통해 DB 구축 : 승연
+
+   참조 : https://continuous-development.tistory.com/105, https://wisenrich.com/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%A5%EA%B3%A0-csv-%ED%8C%8C%EC%9D%BC-%EC%9D%BD%EA%B8%B0%EC%99%80-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4db-sqlite3%EC%97%90-%EC%A0%80%EC%9E%A5/
