@@ -7,11 +7,12 @@ class Station(models.Model):
     code = models.IntegerField()
     lat = models.FloatField()
     lng = models.FloatField()
+    # lactation = models.BooleanField()
+    # slope_bicycle = models.BooleanField()
     # scaffold = models.BooleanField()
     # wheelchair = models.BooleanField()
-    # lactation = models.BooleanField()
     # slope_wheel = models.BooleanField()
-    # slope_bicycle = models.BooleanField()
+    
 
     def __str__(self):
         return self.name
@@ -27,3 +28,14 @@ class TransferStation(models.Model):
 
     def __str__(self):
         return self.transfer_line + self.name
+        
+
+class WheelchairSlope(models.Model):
+    line = models.CharField(max_length=10)
+    name = models.CharField(max_length=10)
+    total = models.IntegerField()
+
+
+class WheelchairSlopeLocation(models.Model):
+    slope_station = models.ForeignKey(WheelchairSlope, on_delete=models.CASCADE)
+    location = models.CharField(max_length=50)
