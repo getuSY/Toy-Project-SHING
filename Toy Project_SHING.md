@@ -166,3 +166,7 @@ DB, 모델 구성 => Django (5/18)
 2. SHING Project skeleton 형성 및 환승역 model csv 파일 통해 DB 구축 : 승연
 
    참조 : https://continuous-development.tistory.com/105, https://wisenrich.com/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%A5%EA%B3%A0-csv-%ED%8C%8C%EC%9D%BC-%EC%9D%BD%EA%B8%B0%EC%99%80-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4db-sqlite3%EC%97%90-%EC%A0%80%EC%9E%A5/
+   
+3. 휠체어 경사로 => csv 파일 - DB에 넣기
+
+4. 승강기 가동현황 => 주기적으로 api 추출하여 dumping
